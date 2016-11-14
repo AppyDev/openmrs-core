@@ -27,12 +27,14 @@ import org.openmrs.test.Verifies;
 import org.openmrs.util.Security;
 
 public class UserDAOTest extends BaseContextSensitiveTest {
+
+	Encryptionutil encyrptionObject = new Encryptionutil();
 	
-	public static final String SECRET_QUESTION = "What is the answer?";
+	public static final String SECRET_QUESTION = encryptionObject.secretQuestion;
 	
-	public static final String SECRET_ANSWER = "42";
+	public static final String SECRET_ANSWER = encryptionObject.secretAnswer;
 	
-	public static final String PASSWORD = "Openmr5xy";
+	public static final String PASSWORD = encryptionObject.password;
 	
 	private User userJoe;
 	
